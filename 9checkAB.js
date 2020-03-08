@@ -11,7 +11,7 @@ function checkAB(num) {
             posB = i
         }
     }
-    console.log(posA, posB)
+    // console.log(posA, posB)
     var selisih = Math.abs(posA - posB) - 1
     if (selisih === 3) {
         return true
