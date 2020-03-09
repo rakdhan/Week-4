@@ -1,9 +1,8 @@
 function digitPerkalianMinimum(angka) {
     // you can only write your code here!
     var temp = []
-    for (let i = 0; i < angka; i++) {
+    for (let i = 0; i <= angka; i++) {
         var faktorPerkalian = angka / i
-        // console.log(faktorPerkalian)
         if (angka % i === 0) {
             temp.push(i.toString() + faktorPerkalian)
         }
@@ -11,7 +10,7 @@ function digitPerkalianMinimum(angka) {
     //sort buat ambil temp index paling awal
     for (let j = 0; j < temp.length; j++) {
         for (let k = j+1; k < temp.length; k++) {
-            if (temp[j] < temp[k]) {
+            if (Number(temp[j]) > Number(temp[k])) {
                 let singgah = temp[j]
                 temp[j] = temp[k]
                 temp[k] = singgah
@@ -19,11 +18,7 @@ function digitPerkalianMinimum(angka) {
         }        
         var result = temp[0].length
     }
-    if (angka < 10 && angka % 2 !== 0 && angka % 3 !== 0) {
-        return 2
-    }
     return result
-
   }
   
   // TEST CASES
