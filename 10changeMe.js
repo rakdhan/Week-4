@@ -15,7 +15,7 @@ function changeMe(arr) {
         console.log(obj)
     }
     if (arr.length === 0) {
-        console.log('')
+        console.log('""')
     }
 }
 
