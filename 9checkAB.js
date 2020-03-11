@@ -1,25 +1,10 @@
 function checkAB(num) {
-    // you can only write your code here!
-    var posA
-    var posB
     for (let i = 0; i < num.length; i++) {
-        // console.log(num[i], i)
-        if (num[i] === 'a') {
-            posA = i
-        }        
-        else if (num[i]=== 'b') {
-            posB = i
+        if (num[i] === 'b' && num[i+4] === 'a' || num[i] === 'a' && num[i+4] === 'b' ) {
+            return true
         }
     }
-    // console.log(posA, posB)
-    var selisih = Math.abs(posA - posB) - 1
-    if (selisih === 3) {
-        return true
-    }
-    else{
-        return false
-    }
-  
+    return false
   }
   
   // TEST CASES
@@ -28,3 +13,4 @@ function checkAB(num) {
   console.log(checkAB('you are boring')); // true
   console.log(checkAB('barbarian')); // true
   console.log(checkAB('bacon and meat')); // false
+  console.log(checkAB('booba')); // true
