@@ -9,7 +9,7 @@ function changeMe(arr) {
         obj.lastName = arr[i][1]
         obj.gender = arr[i][2]
         obj.age = tahun - arr[i][3]
-        if (isNaN(obj.age)) {
+        if (isNaN(obj.age) || obj.age === undefined || obj.age === null || tahun < arr[i][3]) {
             obj.age = 'Invalid Birth Year'
         }
         console.log(obj)
