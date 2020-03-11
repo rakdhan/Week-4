@@ -7,10 +7,7 @@ function shoppingTime(memberId, money) {
         ['Sweater Uniklooh', 175000],
         ['Casing Handphone', 50000]
     ]
-    if (memberId === '') {
-        return 'Mohon maaf, toko X hanya berlaku untuk member saja'
-    }
-    else if (memberId === undefined && money === undefined) {
+    if (memberId === undefined && money === undefined || memberId === '') {
         return 'Mohon maaf, toko X hanya berlaku untuk member saja'
     }
     else if (money < 50000 || money === undefined || money === '') {
